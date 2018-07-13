@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f50b0b</color>
+    <color name="colorPrimaryDark">#d10909</color>
+    <color name="colorAccent">#ff4059</color>
+
+    <color name="colorSubtitle">#999</color>
+    <color name="colorTitle">#666</color>
+    <color name="colorWhite">#ffffffff</color>
+    <!--分割线-->
+    <color name="colorLine">#EBEBEB</color>
+    <!-- 离线线卡片颜色-->
+    <color name="colorDeviceOffline">#ff7940</color>
+    <!--在线卡片颜色-->
+    <color name="colorDeviceOnline">#3467ff</color>
+</resources>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="350dp">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_main"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="健康微环境助手"
+        android:textSize="30sp"
+        android:textColor="#f50b0b"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="当前版本：1.0.0"
+        android:textColor="#ff7575"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="left"
+        android:lineSpacingExtra="3dp"
+        android:layout_gravity="center"
+        android:text="
+        健康微环境助手是您和家庭的贴心助手
+        通过对您生活环境和穿戴设备的数据分析
+        给予您最优质的健康服务和疾病预防"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/bg_curve" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:textAlignment="center"
+        android:layout_marginTop="2dp"
+        android:text="copyright by TOEC software 2018"
+        android:textColor="#390000"
+        android:textSize="8sp"/>
+</LinearLayout>

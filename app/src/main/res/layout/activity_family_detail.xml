@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="viewmodel"
+        type="com.wm.toec.microenv.viewmodel.member.MemberDetailViewModel"/>
+</data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/network_error"
+            layout="@layout/layout_network_error"
+            android:visibility="gone"/>
+        <LinearLayout
+            android:id="@+id/family_detail_content"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#ffffff">
+            <RelativeLayout
+                android:id="@+id/family_detail_role"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:text="家庭称呼"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.familyName}"
+                    android:textSize="15sp"
+                    android:id="@+id/textView" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@+id/textView"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/ic_edit"
+                    android:onClick="editName"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/family_detail_height"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:text="身高"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.height}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editHeight"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/family_detail_weight"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:text="体重"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.weight}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editWeight"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/family_detail_birth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:text="出生年月"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.birthday}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editBirthday"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/family_btn_sync"
+                android:backgroundTint="#ff4444"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:onClick="sync"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:text="同步"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </FrameLayout>
+</layout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/manual_select"
+    android:icon="@drawable/ic_delete"
+    android:title="手动添加"/>
+    <item android:id="@+id/qrcode_select"
+        android:icon="@drawable/ic_delete"
+        android:title="扫码添加"/>
+</menu>

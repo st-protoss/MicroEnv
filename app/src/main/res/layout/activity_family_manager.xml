@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/family_no_member"
+            layout="@layout/layout_nomember_status"
+            android:visibility="gone"/>
+        <include
+            android:id="@+id/network_error"
+            layout="@layout/layout_network_error"
+            android:visibility="gone"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/family_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTintMode="src_over"
+            android:backgroundTint="@color/colorPrimary"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_add"
+            android:layout_marginBottom="20dp"
+            android:onClick="addFamilyMember"/>
+    </FrameLayout>
+</layout>

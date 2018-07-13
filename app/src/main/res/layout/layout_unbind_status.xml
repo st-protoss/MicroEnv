@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center">
+<ImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/bg_unbind"
+    android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="尚未绑定设备"
+        android:layout_gravity="center"/>
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/add_device"
+        android:backgroundTint="#ff4444"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:onClick="login"
+        android:text="点击添加"
+        android:textColor="#fff"
+        android:textStyle="normal"
+        android:layout_gravity="center"/>
+</LinearLayout>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.wm.toec.microenv.viewmodel.wear.WearUploadViewModel"/>
+    </data>
+    <FrameLayout
+        android:id="@+id/wear_upload_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#ffffff">
+            <RelativeLayout
+                android:id="@+id/wear_sleep"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="睡眠时间"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.sleepTime}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editSleepTime"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/wear_deep_sleep"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="深度睡眠时间"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.deepSleepTime}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editDeepSleepTime"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/wear_heartbeat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="心跳次数"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.heartbeat}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editHeartbeat"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <RelativeLayout
+                android:id="@+id/wear_bloodpressure_high"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:paddingLeft="12dp"
+                    android:text="血压高压"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.bloodPressureH}"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_edit"
+                    android:onClick="editBloodPressureH"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/wear_bloodpressure_low"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="血压低压"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.bloodPressureL}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editBloodPressureL"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/wear_glocuse"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="血糖"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.glocuse}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editGlucose"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dfdfdf"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+            <RelativeLayout
+                android:id="@+id/wear_foot_step"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="checkUpdate"
+                    android:text="步数"
+                    android:textSize="18sp"
+                    android:paddingLeft="12dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="45dp"
+                    android:text="@={viewmodel.footstep}"
+                    android:textSize="15sp" />
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_edit"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:onClick="editFootstep"/>
+            </RelativeLayout>
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/bg_color"/>
+            <RelativeLayout
+            android:id="@+id/wear_detail_status"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="checkUpdate"
+                android:text="健康状况"
+                android:textSize="18sp"
+                android:paddingLeft="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="45dp"
+                android:text="@={viewmodel.situation}"
+                android:textSize="15sp" />
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_edit"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="4dp"
+                android:onClick="editSituation"/>
+        </RelativeLayout>
+        </LinearLayout>
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/family_btn_sync"
+            android:backgroundTint="#ff4444"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:onClick="sync"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="40dp"
+            android:text="同步"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+    </FrameLayout>
+</layout>

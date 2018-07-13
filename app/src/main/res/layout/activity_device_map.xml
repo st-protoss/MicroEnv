@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.wm.toec.microenv.viewmodel.device.LocationViewModel"/>
+    </data>
+    <FrameLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_gravity="top"
+            android:backgroundTint="#fff"
+            android:translationZ="2dp"
+            android:layout_margin="10dp"
+            android:elevation="2dp"
+            app:cardCornerRadius="5dp">
+            <TextView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.location}"
+                android:textColor="@color/colorSubtitle"
+                android:gravity="center"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:maxLength="25" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/device_map_submit"
+                android:backgroundTint="#ff4444"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:text="选取当前地点"
+                android:onClick="confirmLocation"
+                android:textColor="#fff"
+                android:textStyle="normal"
+                android:layout_marginBottom="10dp"/>
+        </android.support.v7.widget.CardView>
+<com.baidu.mapapi.map.MapView
+    android:id="@+id/map_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"/>
+</FrameLayout>
+</layout>
