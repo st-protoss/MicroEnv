@@ -29,8 +29,10 @@ public class LocationViewModel extends ViewModel {
     public void setLocationCommand(LocationCommand locationCommand) {
         this.locationCommand = locationCommand;
     }
-    public void confirmLocation(String location){
-        Disposable disposable = HttpSet.getInstance().getToecServer().changeLocation(Constants.userID,location)
+
+    public void confirmLocation() {
+        String locationStr = location.get();
+        Disposable disposable = HttpSet.getInstance().getToecServer().changeLocation(Constants.userID, locationStr)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(locationBean -> {

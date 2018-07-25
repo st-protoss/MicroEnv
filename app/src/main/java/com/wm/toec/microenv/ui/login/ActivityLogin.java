@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 
 import com.wm.toec.microenv.R;
 import com.wm.toec.microenv.base.BaseActivity;
@@ -30,7 +31,7 @@ public class ActivityLogin extends BaseActivity<ActivityLoginBinding> implements
         loginViewModel.setLoginComman(this);
     }
 
-    public void login(){
+    public void login(View v) {
         loginViewModel.login();
     }
 

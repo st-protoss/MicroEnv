@@ -35,8 +35,8 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation "com.android.support:design:27.1.1"
-    implementation "com.android.support:cardview-v7:27.1.1"
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support:cardview-v7:27.1.1'
     //calenderview
     compile 'com.haibin:calendarview:3.3.5'
     //bottomsheet
@@ -52,8 +52,6 @@ dependencies {
     implementation 'android.arch.lifecycle:extensions:1.1.1'
     implementation 'android.arch.lifecycle:reactivestreams:1.1.1'
     //baidumap
-    compile files('libs/BaiduLBS_Android.jar')
-    compile files('libs/BaiduLBS_Android_Map.jar')
     //zxing
     //implementation 'com.google.zxing:core:3.3.0'
     compile 'cn.yipianfengye.android:zxing-library:2.2'
@@ -73,4 +71,5 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    implementation files('libs/BaiduLBS_Android_final.jar')
 }

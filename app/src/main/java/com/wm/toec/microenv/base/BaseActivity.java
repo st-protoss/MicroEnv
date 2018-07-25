@@ -38,6 +38,7 @@ public class BaseActivity<V extends ViewDataBinding> extends AppCompatActivity {
         mBindView.getRoot().setLayoutParams(params);
         RelativeLayout mContainer = (RelativeLayout)mBaseView.getRoot().findViewById(R.id.container);
         mContainer.addView(mBindView.getRoot());
+        getWindow().setContentView(mBaseView.getRoot());
 
         // 设置透明状态栏，兼容4.4
         //StatusBarUtil.setColor(this, CommonUtils.getColor(R.color.colorTheme),0);
@@ -85,7 +86,7 @@ public class BaseActivity<V extends ViewDataBinding> extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (this.mCompositeDisposable!=null||!this.mCompositeDisposable.isDisposed()){
+        if (this.mCompositeDisposable != null && !this.mCompositeDisposable.isDisposed()) {
             this.mCompositeDisposable.clear();
         }
     }

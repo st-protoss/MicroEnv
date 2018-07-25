@@ -8,6 +8,7 @@ public class VersionResultBean {
     public int needUpdate;//1yes 0 no
     public String targetVersion;
     public String targetSize;
+    public String downloadUrl;
 
     public int getNeedUpdate() {
         return needUpdate;
@@ -31,5 +32,13 @@ public class VersionResultBean {
 
     public void setTargetSize(String targetSize) {
         this.targetSize = targetSize;
+    }
+
+    public String getDownloadUrl() {
+        return downloadUrl;
+    }
+
+    public void setDownloadUrl(String downloadUrl) {
+        this.downloadUrl = downloadUrl;
     }
 }

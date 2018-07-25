@@ -48,6 +48,7 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="number"
                     android:maxLines="1"
+                    android:maxLength="4"
                     android:singleLine="true"
                     android:text="@={viewmodel.verifycode}" />
 

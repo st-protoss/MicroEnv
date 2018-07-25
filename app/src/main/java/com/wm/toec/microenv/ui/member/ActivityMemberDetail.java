@@ -15,7 +15,6 @@ import com.wm.toec.microenv.bean.FamilyMemberBean;
 import com.wm.toec.microenv.databinding.ActivityFamilyDetailBinding;
 import com.wm.toec.microenv.eventbus.BaseMessage;
 import com.wm.toec.microenv.eventbus.Rxbus;
-import com.wm.toec.microenv.ui.device.ActivityDeviceManager;
 import com.wm.toec.microenv.util.ToastUtil;
 import com.wm.toec.microenv.viewmodel.member.FamilyDetailCommand;
 import com.wm.toec.microenv.viewmodel.member.MemberDetailViewModel;
@@ -91,7 +90,7 @@ public class ActivityMemberDetail extends BaseActivity<ActivityFamilyDetailBindi
     /**
      * 编辑昵称
      */
-    public void editName(){
+    public void editName(View v) {
         //手动选择 弹框
         new MaterialDialog.Builder(this)
                 .title("编辑家庭称呼")
@@ -112,7 +111,7 @@ public class ActivityMemberDetail extends BaseActivity<ActivityFamilyDetailBindi
     /**
      * 编辑身高
      */
-    public void editHeight(){
+    public void editHeight(View v) {
         new MaterialDialog.Builder(this)
                 .title("编辑身高")
                 .content("请填写该成员的身高数值")
@@ -133,7 +132,7 @@ public class ActivityMemberDetail extends BaseActivity<ActivityFamilyDetailBindi
     /**
      * 编辑体重
      */
-    public void editWeight(){
+    public void editWeight(View v) {
         new MaterialDialog.Builder(this)
                 .title("编辑体重")
                 .content("请填写该成员的体重数值")
@@ -153,7 +152,7 @@ public class ActivityMemberDetail extends BaseActivity<ActivityFamilyDetailBindi
     /**
      * 编辑生日
      */
-    public void editBirthday(){
+    public void editBirthday(View v) {
         Calendar calendar = Calendar.getInstance();
         DatePickerDialog datePickerDialog = new DatePickerDialog(ActivityMemberDetail.this, new DatePickerDialog.OnDateSetListener() {
 
@@ -183,13 +182,13 @@ public class ActivityMemberDetail extends BaseActivity<ActivityFamilyDetailBindi
     /**
      * 同步信息/添加成员
      */
-    public void sync(){
+    public void sync(View v) {
         if (intentType ==1){
             //添加成员
             memberDetailViewModel.addMember(familyName,weight,height,birthday);
         }else if(intentType ==2){
             //编辑成员
-            memberDetailViewModel.editMember(familyName,weight,height,birthday);
+            memberDetailViewModel.editMember(familyMemberBean.getMemberId(), familyName, weight, height, birthday);
         }
     }
     /**

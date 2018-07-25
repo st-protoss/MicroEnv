@@ -52,8 +52,9 @@ public class MemberDetailViewModel extends ViewModel {
                 });
         mActivity.addDisposable(disposable);
     }
-    public void editMember(String name,String weigh,String heigh,String birt){
-       Disposable disposable =  HttpSet.getInstance().getToecServer().editMember(Constants.userID,name,heigh,weigh,birt)
+
+    public void editMember(String memberId, String name, String weigh, String heigh, String birt) {
+        Disposable disposable = HttpSet.getInstance().getToecServer().editMember(memberId, name, heigh, weigh, birt)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(memberResultBean->{

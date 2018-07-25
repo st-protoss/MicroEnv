@@ -100,8 +100,8 @@ public class RegisterViewModel extends ViewModel {
             return;
         }
         HttpSet.getInstance().getToecServer().getVerifyCode(phone.get())
-                .subscribeOn(AndroidSchedulers.mainThread())
-                .observeOn(Schedulers.io())
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<VerifyCodeBean>() {
                     @Override
                     public void onSubscribe(Disposable d) {

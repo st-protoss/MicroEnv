@@ -2,14 +2,11 @@ package com.wm.toec.microenv.ui.device;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
+import android.view.View;
 
 import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
-import com.baidu.location.Poi;
 import com.baidu.mapapi.map.BaiduMap;
-import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
@@ -27,16 +24,10 @@ import com.wm.toec.microenv.R;
 import com.wm.toec.microenv.app.App;
 import com.wm.toec.microenv.base.BaseActivity;
 import com.wm.toec.microenv.databinding.ActivityDeviceMapBinding;
-import com.wm.toec.microenv.eventbus.BaseMessage;
-import com.wm.toec.microenv.eventbus.Rxbus;
 import com.wm.toec.microenv.plugin.lbs.LocationService;
-import com.wm.toec.microenv.ui.portal.ActivityPortal;
 import com.wm.toec.microenv.util.ToastUtil;
 import com.wm.toec.microenv.viewmodel.device.LocationCommand;
 import com.wm.toec.microenv.viewmodel.device.LocationViewModel;
-
-import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
 
 /**
  * Created by wm on 2018/7/4.
@@ -175,9 +166,8 @@ public class ActivityLocation extends BaseActivity<ActivityDeviceMapBinding> imp
 
     }
 
-    @Override
-    public void confirmLocation(String location) {
-        locationViewModel.confirmLocation(location);
+    public void confirmLocation(View v) {
+        locationViewModel.confirmLocation();
     }
 
     @Override

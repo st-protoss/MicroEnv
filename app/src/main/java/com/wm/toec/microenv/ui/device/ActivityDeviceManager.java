@@ -2,17 +2,14 @@ package com.wm.toec.microenv.ui.device;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.CardView;
-import android.text.InputType;
 import android.view.LayoutInflater;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.cocosw.bottomsheet.BottomSheet;
 import com.uuzuche.lib_zxing.activity.CaptureActivity;
@@ -23,7 +20,6 @@ import com.wm.toec.microenv.bean.DeviceInfoBean;
 import com.wm.toec.microenv.databinding.ActivityDeviceManagerBinding;
 import com.wm.toec.microenv.eventbus.BaseMessage;
 import com.wm.toec.microenv.eventbus.Rxbus;
-import com.wm.toec.microenv.ui.setting.SettingActivity;
 import com.wm.toec.microenv.util.DebugUtil;
 import com.wm.toec.microenv.util.ToastUtil;
 import com.wm.toec.microenv.viewmodel.device.DeviceManagerCommand;

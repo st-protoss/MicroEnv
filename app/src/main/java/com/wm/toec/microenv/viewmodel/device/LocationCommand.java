@@ -5,7 +5,7 @@ package com.wm.toec.microenv.viewmodel.device;
  */
 
 public interface LocationCommand {
-    public void confirmLocation(String location);
+    /*public void confirmLocation(String location);*/
     public void bindSuccess();
     public void bindFail();
 }

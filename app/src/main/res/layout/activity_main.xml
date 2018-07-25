@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout xmlns:wave="http://schemas.android.com/apk/res-auto"
+        xmlns:app="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.wm.toec.microenv.customview.waveview.WaveView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_gradient"
+            wave:above_wave_color="@android:color/white"
+            wave:blow_wave_color="@android:color/white"
+            wave:progress="25"
+            wave:wave_height="large"
+            wave:wave_hz="normal"
+            wave:wave_length="middle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:id="@+id/main_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018年"
+                android:layout_margin="8dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/main_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7月4日"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/main_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期一"
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/main_setting"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_settings"
+                android:layout_gravity="right"
+                android:layout_margin="8dp" />
+
+            <ImageView
+                android:id="@+id/main_notice"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_notifications"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="48dp" />
+
+            <ImageView
+                android:id="@+id/main_refresh"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_refresh"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="88dp" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/main_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="欢迎来到健康微环境助手！"
+                android:textColor="@color/colorWhite" />
+
+            <com.wm.toec.microenv.customview.MainCircleView
+                android:id="@+id/main_cv"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:padding="10dp" />
+
+            <ImageView
+                android:id="@+id/main_change"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_change"
+                android:layout_gravity="center_horizontal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_member"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_member"
+                android:layout_gravity="left|bottom"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:shadowColor="@color/bg_color"
+                wave:borderWidth="0dp"
+                android:elevation="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人员管理"
+                android:layout_gravity="left|bottom"
+                android:textColor="#2b0000"
+                android:layout_marginLeft="26dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_device"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_report"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/colorWhite"
+                android:shadowColor="@color/bg_color"
+                wave:borderWidth="0dp"
+                android:elevation="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备管理"
+                android:textColor="#2b0000"
+                android:layout_gravity="bottom|center_horizontal" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/main_upload"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/main_upload"
+                android:layout_gravity="right|bottom"
+                android:backgroundTint="@color/colorWhite"
+                android:shadowColor="@color/bg_color"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="30dp"
+                app:borderWidth="0dp"
+                android:elevation="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据上传"
+                android:layout_gravity="bottom|right"
+                android:textColor="#2b0000"
+                android:layout_marginRight="26dp" />
+        </FrameLayout>
+    </FrameLayout>
+</layout>

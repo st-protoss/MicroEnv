@@ -1,10 +1,9 @@
 package com.wm.toec.microenv.data.http;
 
-import android.databinding.ObservableField;
-
 import com.wm.toec.microenv.bean.BindResultBean;
 import com.wm.toec.microenv.bean.DeviceInfoBean;
 import com.wm.toec.microenv.bean.FamilyMemberBean;
+import com.wm.toec.microenv.bean.FamilyMemberIndexBean;
 import com.wm.toec.microenv.bean.LocationBean;
 import com.wm.toec.microenv.bean.LoginBean;
 import com.wm.toec.microenv.bean.MemberResultBean;
@@ -21,7 +20,6 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 /**
@@ -64,7 +62,7 @@ public interface IToecServerApi {
     //编辑某成员
     @FormUrlEncoded
     @POST("app/editMember")
-    Observable<MemberResultBean> editMember(@Query("userId") String userId,@Field("name")String name, @Field("height")String height,
+    Observable<MemberResultBean> editMember(@Query("memberId") String memberId, @Field("name") String name, @Field("height") String height,
                                             @Field("weight")String weight, @Field("birthday")String birthday);
     //添加某成员
     @FormUrlEncoded
@@ -88,4 +86,8 @@ public interface IToecServerApi {
     //检测更新
     @GET("app/checkVersion")
     Observable<VersionResultBean> checkVersion(@Query("currentVersion")String currentVersion);
+
+    //获取成员列表和当日健康指数
+    @GET("app/getFamilyIndexList")
+    Observable<List<FamilyMemberIndexBean>> getFamilyListWithIndex(@Query("userId") String userId);
 }

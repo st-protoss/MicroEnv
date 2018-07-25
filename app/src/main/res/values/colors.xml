@@ -13,4 +13,6 @@
     <color name="colorDeviceOffline">#ff7940</color>
     <!--在线卡片颜色-->
     <color name="colorDeviceOnline">#3467ff</color>
+    <!--webview滚动条颜色-->
+    <color name="colorWebViewScroll">#777D7D7D</color>
 </resources>

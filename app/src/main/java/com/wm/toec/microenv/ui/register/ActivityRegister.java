@@ -4,13 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 
 import com.wm.toec.microenv.R;
 import com.wm.toec.microenv.base.BaseActivity;
 import com.wm.toec.microenv.databinding.ActivityRegisterBinding;
-import com.wm.toec.microenv.ui.login.ActivityLogin;
 import com.wm.toec.microenv.ui.main.ActivityMain;
-import com.wm.toec.microenv.util.ToastUtil;
 import com.wm.toec.microenv.viewmodel.register.RegisterCommand;
 import com.wm.toec.microenv.viewmodel.register.RegisterViewModel;
 
@@ -31,10 +30,11 @@ public class ActivityRegister extends BaseActivity<ActivityRegisterBinding> impl
         registerViewModel.setRegisterCommand(this);
     }
 
-    public void register(){
+    public void register(View v) {
         registerViewModel.register();
     }
-    public void getVerifyCode(){
+
+    public void getVerifyCode(View v) {
         registerViewModel.getVerifyCode();
     }
     /**

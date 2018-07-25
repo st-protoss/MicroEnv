@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.wm.toec.microenv.R;
@@ -22,7 +23,7 @@ import io.reactivex.functions.Consumer;
  * Created by toec on 2018/7/12.
  */
 
-public class SettingActivity extends BaseActivity<ActivitySettingBinding> implements SettingCommand {
+public class ActivitySetting extends BaseActivity<ActivitySettingBinding> implements SettingCommand {
     private SettingViewModel settingViewModel;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,7 +34,8 @@ public class SettingActivity extends BaseActivity<ActivitySettingBinding> implem
         settingViewModel.displayCache();
         registeRxBus();
     }
-    public void about(){
+
+    public void about(View v) {
         new MaterialDialog.Builder(this)
                 .title("关于微环境助手")
                 .customView(R.layout.layout_about,true)
@@ -43,14 +45,16 @@ public class SettingActivity extends BaseActivity<ActivitySettingBinding> implem
                 }))
                 .show();
     }
-    public void deleteCache(){
+
+    public void deleteCache(View v) {
         settingViewModel.deleteCache();
     }
-    public void checkUpdate(){
+
+    public void checkUpdate(View v) {
         settingViewModel.checkUpdate();
     }
 
-    public void exit(){
+    public void exit(View v) {
         new MaterialDialog.Builder(this)
                 .title("退出系统")
                 .content("确认退出微环境助手么？")
@@ -75,7 +79,7 @@ public class SettingActivity extends BaseActivity<ActivitySettingBinding> implem
                     public void accept(BaseMessage baseMessage) throws Exception {
                         if (baseMessage.getmCode()==4){
                             //退出该app
-                            SettingActivity.this.finish();
+                            ActivitySetting.this.finish();
                         }
                     }
                 });

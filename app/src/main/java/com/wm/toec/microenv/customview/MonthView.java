@@ -1,11 +1,9 @@
 package com.wm.toec.microenv.customview;
 
 import android.content.Context;
-import android.graphics.BlurMaskFilter;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
-import android.view.View;
 
 import com.haibin.calendarview.Calendar;
 
@@ -75,19 +73,19 @@ public class MonthView extends com.haibin.calendarview.MonthView {
                     cx,
                     baselineY,
                     mSelectTextPaint);
-            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 10, mSelectedLunarTextPaint);
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 8, mSelectedLunarTextPaint);
         } else if (hasScheme) {
             canvas.drawText(String.valueOf(calendar.getDay()),
                     cx,
                     baselineY,
                     calendar.isCurrentDay() ? mCurDayTextPaint :
                             calendar.isCurrentMonth() ? mSchemeTextPaint : mOtherMonthTextPaint);
-            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 10, mSelectedLunarTextPaint);
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 8, mSelectedLunarTextPaint);
         } else {
             canvas.drawText(String.valueOf(calendar.getDay()), cx, baselineY,
                     calendar.isCurrentDay() ? mCurDayTextPaint :
                             calendar.isCurrentMonth() ? mCurMonthTextPaint : mOtherMonthTextPaint);
-            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 10, mSelectedLunarTextPaint);
+            canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 8, mSelectedLunarTextPaint);
         }
     }
 

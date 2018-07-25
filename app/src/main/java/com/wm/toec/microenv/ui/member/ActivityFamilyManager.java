@@ -16,12 +16,9 @@ import com.wm.toec.microenv.databinding.ActivityFamilyManagerBinding;
 import com.wm.toec.microenv.eventbus.BaseMessage;
 import com.wm.toec.microenv.eventbus.Rxbus;
 import com.wm.toec.microenv.ui.device.ActivityLocation;
-import com.wm.toec.microenv.ui.portal.ActivityPortal;
-import com.wm.toec.microenv.ui.setting.SettingActivity;
 import com.wm.toec.microenv.viewmodel.member.FamilyMemberCommand;
 import com.wm.toec.microenv.viewmodel.member.FamilyMemberViewModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import io.reactivex.disposables.Disposable;
@@ -98,7 +95,7 @@ public class ActivityFamilyManager extends BaseActivity<ActivityFamilyManagerBin
     /**
      * 添加家庭成员
      */
-    public void addFamilyMember(){
+    public void addFamilyMember(View v) {
         Intent intent = new Intent(ActivityFamilyManager.this, ActivityLocation.class);
         intent.putExtra("TYPE",ADD_MEMBER);
         startActivity(intent);

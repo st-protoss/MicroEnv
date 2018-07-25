@@ -6,7 +6,7 @@ package com.wm.toec.microenv.bean;
  */
 
 public class LoginBean {
-    int status;//0密码错误 1登陆成功 2用户名不存在
+    int status;//0密码错误 或用户名不存在 1登陆成功 2用户被冻结
     String userId;
 
     public int getStatus() {

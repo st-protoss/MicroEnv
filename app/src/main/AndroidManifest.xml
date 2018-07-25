@@ -16,14 +16,63 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.baidu.lbsapi.API_KEY"
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
             android:value="cxVmRpqg9Eg2L6dGW9N2LrcE6luuIjNE"></meta-data>
         <!-- 声明service组件 -->
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote" >
-        </service>
+            android:process=":remote"></service>
+
+        <activity
+            android:name=".ui.launcher.ActivityLauncher"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.ActivityReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.ActivityMain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.ActivityDeviceManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.device.ActivityLocation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.ActivityLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.member.ActivityFamilyManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.member.ActivityMemberDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.portal.ActivityPortal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.register.ActivityRegister"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.setting.ActivitySetting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.wear.ActivityCalender"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.wear.ActivityWearManager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.wear.ActivityWearUpload"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

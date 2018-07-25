@@ -10,7 +10,7 @@ import java.io.File;
 public class Constants {
     public static boolean DEBUG = true;
     //服务器的路径
-    public final static String TOEC_SERVER_URL = "192.168.1.1";
+    public final static String TOEC_SERVER_URL = "http://47.95.254.37:8080/app/";
     //网络数据缓存路径
     public final static String NET_CACHE_URL = App.getAppContext().getCacheDir().getAbsolutePath() + File.separator + "ToecNetCache";
     //当前是否登陆过
